@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --sky-back: #f6f6f6
+  --primary: #00422E;
+  --green-light: #337458;
+  --dark: #000000;
+  --Black: #000403;  
+  --Orange: #f09e00;
+  --blue-secondary: #024767;
+  --text-primary: #1E1E1E;
+  --text-dark: #181818;
+  --GrayL: #Cfd9d5;
+  --text-secondary: #454545;
+  --text-extra-dark: #181A20;
+  --input-bg: rgba(217, 217, 217, 0.10);
+  --servicesB: #f6f6f6;
+  --serviceBorder: #cdd9d5;
+  --Yellow: #e4a200;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-dark: var(--dark);
+  --color-blue-light: var(--green-light);
+  --color-blue-secondary: var(--blue-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-extra-dark: var(--text-extra-dark);
+  --color-text-dark: var(--text-dark);
+  --color-text-secondary: var(--text-secondary);
+  --color-sky-light: var(--sky-light);
+  --color-input-bg: var(--input-bg);
+  --color-Black: var(--Black);
+  --color-Orange: var(--Orange);
+  --color-GrayL: var(--GrayL);
+  --color-servicesB: var(--servicesB);
+  --color-serviceBorder: var(--serviceBorder);
+  --color-Yellow: var(--Yellow);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --green-light: #337458;
+    --primary: #00422E;
+    --text-extra-dark: #181A20;
+    --text-dark: #181818;
+    --text-primary: #1E1E1E;
+    --border-gray: #CACACA;
+    --blue-secondary: #024767;
+    --text-secondary: #454545;
+    --dark: #000000;
+    --Black: #000403; 
+    --Orange: #f09e00;
+    --sky-light: #DBEFF9;
+    --input-bg: rgba(217, 217, 217, 0.10);
+    --sky-back: #f6f6f6;
+    --GrayL: #Cfd9d5;
+    --servicesB: #f6f6f6;
+    --serviceBorder: #cdd9d5;
+    --Yellow: #e4a200;
+  }
+}
+
+.heebo {
+  font-family: "Heebo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
