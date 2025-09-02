@@ -1,4 +1,5 @@
 import {about1, about2, about3, about4} from '../../exports'
+import Button from '../module/button/Button'
 const AboutUs = () => {
   return (
     <div className='w-full pt-[314px]  px-[150px] flex flex-row gap-13 justify-between'>
@@ -24,7 +25,11 @@ const AboutUs = () => {
 
       <p className='mt-4 text-base text-Black'>At ABD Law Corporation, we’re here to give you clear, trustworthy legal support that fits your situation and puts your mind at ease. Our knowledgeable team works with care and dedication to protect what matters most, your rights, your assets, and your future</p>
 
-      
+      <Button 
+        text="Read More" 
+        onClick={() => alert("Navigating to services...")} 
+        className="mt-8 w-fit"
+      />
       </div>
 
     </div>

@@ -21,6 +21,7 @@ import about1 from '../public/about(1).webp'
 import about2 from '../public/about(2).webp'
 import about3 from '../public/about(3).webp'
 import about4 from '../public/about(4).webp'
+import homeHero from '../public/home-hero.webp'
 
 export{
     facebook, instagram, linkedin, twitter,
@@ -29,4 +30,5 @@ export{
     experienced, legalSupport, clientFocused, guidance, support,
     family, realEstate, tick, corporate, notary, willEstate,
     about1, about2, about3, about4,
+    homeHero
 }
