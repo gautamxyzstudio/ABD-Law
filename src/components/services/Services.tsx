@@ -1,6 +1,6 @@
 import React from "react";
 import ServiceCard from "../module/serviceCard/ServiceCard";
-import { family, realEstate, willEstate, notary, corporate } from "../../exports";
+import { family, realEstate, willEstate, notary, corporate, image1, image2 } from "../../exports";
 
 const servicesData = [
   {
@@ -64,7 +64,9 @@ const servicesData = [
 
 const Services: React.FC = () => {
   return (
-    <div className="w-full py-31 bg-servicesB px-[150px] mt-23">
+    <div className=" relative w-full py-31 bg-servicesB px-[150px] mt-23">
+      <img className='w-[150px] h-[209px] z-1 absolute top-30 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+      <img className='w-[150px] h-[209px] z-1 absolute bottom-5 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
       <h2 className="text-Black text-5xl font-semibold text-center w-1/2 mx-auto">
         Our Services
       </h2>

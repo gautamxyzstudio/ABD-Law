@@ -12,7 +12,7 @@ const HeroSection = () => {
                 <Button 
                    text="Book a Consultation" 
                    onClick={() => alert("Navigating to form...")} 
-                   className="mt-10 w-fit !bg-Yellow"
+                   className="mt-10 w-fit !text-primary !bg-Yellow"
                  />
             </div>
             <div className='w-7/20 pt-[168px]'>

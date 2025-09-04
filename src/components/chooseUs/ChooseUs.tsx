@@ -1,4 +1,4 @@
-import { experienced, legalSupport, clientFocused, guidance, support } from "../../exports";
+import { experienced, legalSupport, clientFocused, guidance, support, image1, image2 } from "../../exports";
 import ChooseCard, { type CardProps } from "../module/chooseCard/ChooseCard";
 
 const features: CardProps[] = [
@@ -41,7 +41,9 @@ const features: CardProps[] = [
 
 const ChooseUs = () => {
   return (
-    <div className="mt-38 w-full flex flex-col align-middle px-38">
+    <div className="relative mt-38 w-full flex flex-col align-middle px-38">
+      <img className='w-[150px] h-[209px] z-1 absolute top-0 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+      <img className='w-[150px] h-[209px] z-1 absolute bottom-[-93px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
       <h2 className="text-Black text-5xl font-semibold text-center w-1/2 mx-auto">
         Why Choose ABD Law Corporation?
       </h2>

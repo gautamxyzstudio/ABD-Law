@@ -22,6 +22,13 @@ import about2 from '../public/about(2).webp'
 import about3 from '../public/about(3).webp'
 import about4 from '../public/about(4).webp'
 import homeHero from '../public/home-hero.webp'
+import image1 from '../public/image(1).svg'
+import image2 from '../public/image(2).svg'
+import consult from '../public/consult.webp'
+import comma from '../public/comma.svg'  
+import callH from '../public/callH.svg'
+import mailH from '../public/mailH.svg' 
+import logoY from '../public/logoY.webp'  
 
 export{
     facebook, instagram, linkedin, twitter,
@@ -30,5 +37,8 @@ export{
     experienced, legalSupport, clientFocused, guidance, support,
     family, realEstate, tick, corporate, notary, willEstate,
     about1, about2, about3, about4,
-    homeHero
+    homeHero,
+    image1, image2,
+    consult, comma,
+    callH, mailH, logoY
 }

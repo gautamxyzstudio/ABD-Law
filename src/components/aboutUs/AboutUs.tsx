@@ -1,8 +1,10 @@
-import {about1, about2, about3, about4} from '../../exports'
+import {about1, about2, about3, about4, image1, image2} from '../../exports'
 import Button from '../module/button/Button'
 const AboutUs = () => {
   return (
-    <div className='w-full pt-[314px]  px-[150px] flex flex-row gap-13 justify-between'>
+    <div className=' relative w-full pt-[314px]  px-[150px] flex flex-row gap-13 justify-between'>
+        <img className='w-[150px] h-[209px] z-1 absolute top-10 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+        <img className='w-[150px] h-[209px] z-1 absolute bottom-5 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
 
       {/* Left-side */}
       <div className='w-1/2 h-[557px] relative pt-[113px]'>
