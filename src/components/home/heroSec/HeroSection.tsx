@@ -1,5 +1,5 @@
-import { homeHero } from '../../exports'
-import Button from '../module/button/Button'
+import { homeHero } from '../../../exports'
+import Button from '../../module/button/Button'
 
 const HeroSection = () => {
   return (

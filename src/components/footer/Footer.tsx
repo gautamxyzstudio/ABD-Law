@@ -9,6 +9,7 @@ import {
   message,
   location,
 } from "../../exports";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -74,6 +75,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-[20px] w-1/7">
             <h3 className="text-white text-xl font-semibold">Links</h3>
             <ul className="text-white text-base flex flex-col gap-[15px] opacity-80">
+              <li><Link to={"/blogs"}>Blogs</Link></li>
               <li>Term of Service</li>
               <li>Privacy Policy</li>
             </ul>

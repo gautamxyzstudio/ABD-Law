@@ -1,8 +1,8 @@
-import { image1, image2 } from '../../exports'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'     
 import React from 'react'
-import TestimonialCard from '../module/testimonialCard/TestimonialCard'
+import TestimonialCard from '../../module/testimonialCard/TestimonialCard';
+import { image2, image1 } from '../../../exports';
 
 const testimonials = [
   {

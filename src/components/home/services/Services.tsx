@@ -1,6 +1,6 @@
 import React from "react";
-import ServiceCard from "../module/serviceCard/ServiceCard";
-import { family, realEstate, willEstate, notary, corporate, image1, image2 } from "../../exports";
+import { family, realEstate, willEstate, notary, corporate, image1, image2 } from "../../../exports";
+import ServiceCard from "../../module/serviceCard/ServiceCard";
 
 const servicesData = [
   {

@@ -1,5 +1,5 @@
-import {about1, about2, about3, about4, image1, image2} from '../../exports'
-import Button from '../module/button/Button'
+import {about1, about2, about3, about4, image1, image2} from '../../../exports'
+import Button from '../../module/button/Button'
 const AboutUs = () => {
   return (
     <div className=' relative w-full pt-[314px]  px-[150px] flex flex-row gap-13 justify-between'>

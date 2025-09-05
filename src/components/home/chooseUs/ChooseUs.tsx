@@ -1,5 +1,5 @@
-import { experienced, legalSupport, clientFocused, guidance, support, image1, image2 } from "../../exports";
-import ChooseCard, { type CardProps } from "../module/chooseCard/ChooseCard";
+import { experienced, legalSupport, clientFocused, guidance, support, image1, image2 } from "../../../exports";
+import ChooseCard, { type CardProps } from "../../module/chooseCard/ChooseCard";
 
 const features: CardProps[] = [
   {

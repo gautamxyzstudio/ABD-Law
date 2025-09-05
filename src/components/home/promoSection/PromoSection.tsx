@@ -1,5 +1,6 @@
-import Button from '../module/button/Button'
-import { consult } from '../../exports'
+import { consult } from "../../../exports"
+import Button from "../../module/button/Button"
+
 const PromoSection = () => {
   return (
     <div className=" mt-38 relative w-full h-[524px] flex items-center ">
