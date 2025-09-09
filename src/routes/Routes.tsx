@@ -4,6 +4,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import { routes } from "../routes";
 import Blogs from "../pages/blogs/blogs";
+import BlogDetail from "../pages/blogDetail/BlogDetail";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
             />
           ))}
           <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/blogs/:id" element={<BlogDetail/>} />
         </Routes>
         
       </main>
