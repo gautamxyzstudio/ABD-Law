@@ -1,4 +1,5 @@
 import Home from "./pages/home/Home";
+import TaxCalculator from "./pages/taxCalculator/TaxCalculator";
 
 export interface RouteType {
   path: string;
@@ -14,5 +15,5 @@ export const routes: RouteType[] = [
   { path: "/corporate", name: "Corporate", element: <h1>Corporate</h1> },
   { path: "/wills", name: "Wills", element: <h1>Wills</h1> },
   { path: "/notary", name: "Notary", element: <h1>Notary</h1> },
-  { path: "/tax-calculator", name: "Tax Calculator", element: <h1>Tax Calculator</h1> },
+  { path: "/tax-calculator", name: "Tax Calculator", element: <TaxCalculator/> },
 ];
