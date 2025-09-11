@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Button from "../button/Button";
 
-const PttCalculator: React.FC = () => {
+interface PttCalculatorProps {
+  title?: string; // make title optional
+}
+
+const PttCalculator:React.FC<PttCalculatorProps> = ({ title = "Spagnuolo PTT Calculator" }) => {
   const [propertyType, setPropertyType] = useState<"Residential" | "Commercial">("Residential");
   const [amount, setAmount] = useState<number | "">("");
   const [taxBreakdown, setTaxBreakdown] = useState({
@@ -58,11 +62,11 @@ const PttCalculator: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto rounded-xl shadow-md overflow-hidden">
+    <div className="max-w-md mx-auto rounded-xl shadow-lg overflow-hidden bg-servicesB">
 
       {/* Header */}
-      <div className="bg-primary  text-white text-center py-3 font-semibold">
-        Spagnuolo PTT Calculator
+      <div className="bg-primary  text-white text-center p-3 font-semibold">
+        {title}
       </div>
 
       <div className="p-3">
@@ -109,7 +113,7 @@ const PttCalculator: React.FC = () => {
             <p className="text-base text-text-secondary">Tax on amount over $3,000,000{" "}</p>           
           </div>
         </div>
-        <div className="mt-4 p-2 flex flex-row justify-between  bg-white">
+        <div className="mt-4 p-2 flex flex-row justify-between rounder-sm bg-white">
           <p className="font-bold text-lg">
             Total Tax: 
           </p>

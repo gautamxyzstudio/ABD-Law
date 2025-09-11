@@ -3,7 +3,7 @@ import PttCalculator from '../../module/pttCalculator/PttCalculator'
 const CalculatorSection2 = () => {
   return (
     <div className='w-full flex flex-row gap-30 justify-between px-[150px]  py-31'>
-      <div className='w-11/20 flex flex-col justify-center'>
+      <div className='w-1/2 flex flex-col justify-center'>
           <h2 className="text-Black text-5xl font-semibold text-left w-full mx-auto">First Time Home Buyer Exemption (FTHB)</h2>
           <ul className="list-disc pl-5 space-y-1 mt-4">
             <li>Buyer must be a Canadian citizen or permanent resident and meet B.C. residency history rules.</li>
@@ -14,8 +14,8 @@ const CalculatorSection2 = () => {
 
           </ul>
       </div>
-      <div className='w-9/20'>
-        <PttCalculator/>
+      <div className='w-1/2'>
+        <PttCalculator title='Spagnuolo First Time Home Buyers Exemption Calculator 2024 April'/>
       </div>
     </div>
   )
