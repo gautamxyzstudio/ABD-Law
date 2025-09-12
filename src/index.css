@@ -6,7 +6,8 @@
   --primary: #00422E;
   --green-light: #337458;
   --dark: #000000;
-  --Black: #000403;  
+  --Black: #000403; 
+  --Black80: #323635; 
   --Orange: #f09e00;
   --blue-secondary: #024767;
   --text-primary: #1E1E1E;
@@ -55,6 +56,7 @@ body {
   --color-servicesB: var(--servicesB);
   --color-serviceBorder: var(--serviceBorder);
   --color-Yellow: var(--Yellow);
+  --color-Black80: var(--Black80);  
 }
 
 @media (prefers-color-scheme: light) {
@@ -66,6 +68,7 @@ body {
     --text-dark: #181818;
     --text-primary: #1E1E1E;
     --border-gray: #CACACA;
+    --Black80: #323635; 
     --blue-secondary: #024767;
     --text-secondary: #454545;
     --dark: #000000;

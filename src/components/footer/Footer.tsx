@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           <img
             src={logo}
             alt="ABD Law Logo"
-            className="h-20 w-70 absolute left-106.5 top-10.5"
+            className="h-20 w-70 absolute left-110 top-10.5"
           />
         </div>
 
