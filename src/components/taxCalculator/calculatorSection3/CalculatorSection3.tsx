@@ -2,7 +2,7 @@ import PttCalculator from '../../module/pttCalculator/PttCalculator'
 
 const CalculatorSection3 = () => {
   return (
-    <div className='w-full flex flex-row gap-30 justify-between bg-servicesB mt-38 px-[150px]  py-20'>
+    <div className='w-full flex flex-row gap-30 justify-between bg-servicesB px-[150px]  py-20'>
       <div className='w-1/2 flex flex-col justify-center'>
           <h2 className="text-Black text-5xl font-semibold text-left w-full mx-auto">Newly Built Home Exemption (NBHE) </h2>
           <ul className="list-disc pl-5 space-y-1 mt-4">

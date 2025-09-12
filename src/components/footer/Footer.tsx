@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
       <div className="container">
         {/* Logo-block */}
         <div className="pt-12 relative">
-          <p className="text-white text-[94px] leading-[94px] font-bold opacity-6">
+          <p className="text-white text-[94px] text-center leading-[94px] font-bold opacity-6">
             ABD LAW CORPORATION
           </p>
           <img
