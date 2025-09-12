@@ -28,7 +28,8 @@ import consult from '../public/consult.webp'
 import comma from '../public/comma.svg'  
 import callH from '../public/callH.svg'
 import mailH from '../public/mailH.svg' 
-import logoY from '../public/logoY.webp'  
+import logoY from '../public/logoY.webp' 
+import serviceFamily from '../public/service-family.webp' 
 
 export{
     facebook, instagram, linkedin, twitter,
@@ -40,5 +41,6 @@ export{
     homeHero,
     image1, image2,
     consult, comma,
-    callH, mailH, logoY
+    callH, mailH, logoY,
+    serviceFamily
 }
