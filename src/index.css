@@ -99,3 +99,7 @@ body {
   height:12px;
   width: 12px;
 }
+
+.gradient{
+  background: linear-gradient(90deg, #00402E 40%, #f2f2f20f 113.44%);
+}
