@@ -45,6 +45,9 @@ import serviceNotary from '../public/serviceNotary.webp'
 import serviceWills from '../public/serviceWills.webp'
 import wideRange from '../public/wideRange.webp'
 import futurePlan from '../public/futurePlan.webp'
+import contactCall from '../public/contactCall.svg'
+import contactMail from '../public/contactMail.svg' 
+import contactLocation from '../public/contactLocation.svg'
 
 export{
     facebook, instagram, linkedin, twitter,
@@ -59,5 +62,6 @@ export{
     callH, mailH, logoY,
     serviceFamily, divorce, guardianship, spouseSupport, adoption, property, violence,
     serviceEstate, legal, serviceCommercial, incorporation, startups, serviceNotary, serviceWills,
-    wideRange, futurePlan
+    wideRange, futurePlan,
+    contactCall, contactMail, contactLocation,      
 }

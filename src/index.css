@@ -19,6 +19,7 @@
   --servicesB: #f6f6f6;
   --serviceBorder: #cdd9d5;
   --Yellow: #e4a200;
+  --Gray1: #656968;
 }
 
 html,
@@ -57,6 +58,7 @@ body {
   --color-serviceBorder: var(--serviceBorder);
   --color-Yellow: var(--Yellow);
   --color-Black80: var(--Black80);  
+  --color-Gray1: var(--Gray1);  
 }
 
 @media (prefers-color-scheme: light) {
@@ -81,6 +83,7 @@ body {
     --servicesB: #f6f6f6;
     --serviceBorder: #cdd9d5;
     --Yellow: #e4a200;
+    --Gray1: #656968;
   }
 }
 
@@ -105,4 +108,8 @@ body {
 
 .gradient{
   background: linear-gradient(90deg, #00402E 40%, #f2f2f20f 113.44%);
+}
+
+.gradient-hero{
+  background: #00402e9e;
 }

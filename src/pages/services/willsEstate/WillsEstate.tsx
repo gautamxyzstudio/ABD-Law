@@ -1,5 +1,5 @@
 import Testimonials from "../../../components/home/testimonials/Testimonials";
-import ServiceHero from "../../../components/services/hero-section/ServiceHero";
+import ServiceHero from "../../../components/services/serviceHero/ServiceHero";
 import ServiceCard from "../../../components/services/serviceCard/ServiceCard";
 
 import {futurePlan, image1, image2, serviceWills} from "../../../exports";
@@ -9,6 +9,7 @@ export default function WillsEstate() {
     <div>
       <ServiceHero
         title="Wills & Estate Planning" 
+        imageBack={serviceWills}
         image={serviceWills} 
       />
       <div className="relative mt-95 px-[150px] flex flex-col gap-40">

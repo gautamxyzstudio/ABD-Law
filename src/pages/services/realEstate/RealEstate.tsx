@@ -1,5 +1,5 @@
 import Testimonials from "../../../components/home/testimonials/Testimonials";
-import ServiceHero from "../../../components/services/hero-section/ServiceHero";
+import ServiceHero from "../../../components/services/serviceHero/ServiceHero";
 import ServiceCard from "../../../components/services/serviceCard/ServiceCard";
 import { image1, image2, legal, serviceEstate } from "../../../exports";
 
@@ -8,6 +8,7 @@ export default function RealEstate() {
     <div>
       <ServiceHero
         title="Real Estate Law" 
+        imageBack={serviceEstate}
         image={serviceEstate} 
       />
       <div className="relative mt-95 px-[150px] flex flex-col gap-40 pb-38">
