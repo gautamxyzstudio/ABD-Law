@@ -10,16 +10,16 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ image, alt, title, services }) => {
   return (
-    <div className= "rounded-2xl border border-serviceBorder overflow-hidden w-full md:w-[48.5%] p-5">
+    <div className= "md:rounded-2xl border border-serviceBorder overflow-hidden xl:w-[48.5%] md:w-[47%] p-5">
 
-      <img src={image} alt={alt} className="rounded-xl w-full h-76 object-cover" />
+      <img src={image} alt={alt} className="md:rounded-xl w-full xl:h-76 md:h-50 object-cover" />
 
-      <h3 className="mt-5 text-3xl font-bold text-Black">{title}</h3>
+      <h3 className="mt-5 xl:text-3xl md:text-2xl font-bold text-Black">{title}</h3>
 
-      <div className="mt-4 w-full grid grid-cols-2 gap-4 text-Black">
+      <div className="mt-4 w-full grid xl:grid-cols-2 md:grid-cols-1 xl:gap-4 gap-3 text-Black ">
         {services.map((service, idx) => (
-          <div key={idx} className="flex items-center gap-1.5 text-base">
-            <img className="w-[24px] h-[24px]" src={tick} alt={alt} />{service}
+          <div key={idx} className="flex items-center gap-1.5 xl:text-base md:text-sm">
+            <img className="xl:w-6 xl:h-6 w-5 h-5" src={tick} alt={alt} />{service}
           </div>
         ))}
       </div>

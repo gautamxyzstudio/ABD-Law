@@ -41,15 +41,15 @@ const features: CardProps[] = [
 
 const ChooseUs = () => {
   return (
-    <div className="relative mt-38 w-full flex flex-col align-middle px-38">
-      <img className='w-[150px] h-[209px] z-1 absolute top-0 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-      <img className='w-[150px] h-[209px] z-1 absolute bottom-[-93px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
-      <h2 className="text-Black text-5xl font-semibold text-center w-1/2 mx-auto">
+    <div className="relative xl:mt-38 md:mt-31 w-full flex flex-col align-middle xl:px-[150px] md:px-13 px-6">
+      <img className='w-[150px] h-[209px] xl:block hidden z-1 absolute top-0 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+      <img className='w-[150px] h-[209px] xl:block hidden z-1 absolute bottom-[-93px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+      <h2 className="text-Black xl:text-5xl md:text-4xl font-semibold text-center w-1/2 mx-auto">
         Why Choose ABD Law Corporation?
       </h2>
 
       <div className="bg-Orange mt-1 w-1/6 mx-auto h-0.5"></div>
-        <div className="mt-14 flex flex-wrap justify-center gap-6">
+        <div className="xl:mt-14 md:mt-9 flex flex-wrap justify-center gap-6">
         {features.map((feature, idx) => (
             // {/* Card component */}
             <ChooseCard key={idx}

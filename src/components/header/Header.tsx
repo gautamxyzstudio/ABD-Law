@@ -5,9 +5,9 @@ import { routes } from "../../routes";
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full">
+    <header className="w-full sticky top-0 z-20">
       {/* Top Bar */}
-      <div className="bg-Yellow text-white text-sm flex justify-between items-center px-[150px] py-2">
+      <div className="bg-Yellow md:flex hidden text-white text-sm justify-between items-center xl:px-[150px] md:px-6 py-2">
         <p>
           Trusted legal guidance for families, businesses, and individuals
           across British Columbia
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-primary text-white flex justify-between items-center px-[150px] py-3">
+      <nav className="bg-transparent text-white flex justify-between items-center px-[150px] py-3">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img

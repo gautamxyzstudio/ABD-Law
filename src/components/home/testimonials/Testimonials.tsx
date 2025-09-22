@@ -34,16 +34,16 @@ const testimonials = [
 
 const Testimonials : React.FC = () => {
   return (
-    <div className="relative mt-38 w-full flex flex-col align-middle px-38">
-      <img className='w-[150px] h-[209px] z-1 absolute top-0 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-      <img className='w-[150px] h-[209px] z-1 absolute bottom-[-93px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
-      <h2 className="text-Black text-5xl font-semibold text-center mx-auto">
+    <div className="relative xl:mt-38 md:mt-31 w-full flex flex-col align-middle xl:px-38 md:px-13 px-6">
+      <img className='w-[150px] h-[209px] xl:block md:hidden z-1 absolute top-0 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+      <img className='w-[150px] h-[209px] xl:block md:hidden z-1 absolute bottom-[-93px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+      <h2 className="text-Black xl:text-5xl md:text-4xl font-semibold text-center mx-auto">
         Our customers are saying
       </h2>
 
       <div className="bg-Orange mt-1 w-1/6 mx-auto h-0.5"></div>
 
-      <div className='w-full mx-auto mt-13 max-w-screen-2xl h-[400px] max-h-[420px] flex items-center'>
+      <div className='w-full mx-auto xl:mt-13 md:mt-6 max-w-screen-2xl h-[400px] max-h-[420px] flex items-center'>
 
         <Swiper
           modules={[Pagination, Autoplay]}

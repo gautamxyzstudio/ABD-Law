@@ -1,3 +1,4 @@
+import AboutPage from "./pages/aboutPage/AboutPage";
 import Home from "./pages/home/Home";
 import CorporateCommercial from "./pages/services/corporateCommercial/CorporateCommercial";
 import FamilyLaw from "./pages/services/familyLaw/FamilyLaw";
@@ -14,7 +15,7 @@ export interface RouteType {
 
 export const routes: RouteType[] = [
   { path: "/", name: "Home", element: <Home/> },
-  { path: "/about", name: "About", element: <h1>About Page</h1> },
+  { path: "/about", name: "About", element: <AboutPage/> },
   { path: "/family-law", name: "Family Law", element: <FamilyLaw/> },
   { path: "/real-estate", name: "Real Estate", element: <RealEstate/> },
   { path: "/corporate", name: "Corporate", element: <CorporateCommercial/> },

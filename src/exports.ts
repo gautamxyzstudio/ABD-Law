@@ -48,6 +48,13 @@ import futurePlan from '../public/futurePlan.webp'
 import contactCall from '../public/contactCall.svg'
 import contactMail from '../public/contactMail.svg' 
 import contactLocation from '../public/contactLocation.svg'
+import contactHero from '../public/contactHero.webp'
+import pttHero from '../public/pttHero.webp'
+import blogHero from '../public/blogHero.webp'
+import homeHeroBack from '../public/homeHeroBack.webp'
+import aboutHero from '../public/aboutHero.webp'
+import ourMission from '../public/ourMission.webp'
+import ourApproach from '../public/ourApproach.webp'
 
 export{
     facebook, instagram, linkedin, twitter,
@@ -63,5 +70,7 @@ export{
     serviceFamily, divorce, guardianship, spouseSupport, adoption, property, violence,
     serviceEstate, legal, serviceCommercial, incorporation, startups, serviceNotary, serviceWills,
     wideRange, futurePlan,
-    contactCall, contactMail, contactLocation,      
+    contactCall, contactMail, contactLocation,  
+    contactHero,  pttHero, blogHero, homeHeroBack, aboutHero,
+    ourApproach, ourMission,
 }

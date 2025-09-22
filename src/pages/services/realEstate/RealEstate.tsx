@@ -11,10 +11,10 @@ export default function RealEstate() {
         imageBack={serviceEstate}
         image={serviceEstate} 
       />
-      <div className="relative mt-95 px-[150px] flex flex-col gap-40 pb-38">
+      <div className="relative xl:mt-95 md:mt-108 mt-48 xl:px-[150px] md:px-13 px-6 flex flex-col">
 
-        <img className='w-[150px] h-[209px] z-1 absolute top-[-142px] left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-        <img className='w-[150px] h-[209px] z-1 absolute bottom-[-80px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+        <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute top-[-142px] left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+        <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute bottom-[-80px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
 
         <ServiceCard
            image={legal}

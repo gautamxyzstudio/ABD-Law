@@ -11,10 +11,10 @@ export default function CorporateCommercial() {
         imageBack={serviceCommercial} 
         image={serviceCommercial} 
       />
-      <div className="relative mt-95 px-[150px] flex flex-col gap-40 pb-38">
+      <div className="relative xl:mt-95 md:mt-105 mt-48 xl:px-[150px] md:px-13 px-6 flex flex-col xl:pb-38 md:pb-31 pb-16">
 
-        <img className='w-[150px] h-[209px] z-1 absolute top-[-142px] left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-        <img className='w-[150px] h-[209px] z-1 absolute bottom-12 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+        <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute top-[-142px] left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+        <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute bottom-12 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
 
         <ServiceCard
            image={startups}
@@ -30,7 +30,7 @@ export default function CorporateCommercial() {
         />
       </div>
       
-      <div className="px-[150px] pt-[138px] pb-[114px] bg-servicesB">
+      <div className="xl:px-[150px] md:px-13 px-6 xl:pt-[138px] xl:pb-[114px] md:py-20 py-6 bg-servicesB">
         <ServiceCard
            image={incorporation}
            title="Incorporation Services"

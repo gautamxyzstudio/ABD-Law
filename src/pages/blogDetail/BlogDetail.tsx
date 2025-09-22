@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Testimonials from "../../components/home/testimonials/Testimonials";
 import RecentBlogs from "../../components/blog/recentBlogs/RecentBlogs";
-import { image1, image2 } from "../../exports";
+import { blogHero, image1, image2 } from "../../exports";
+import PagesHero from "../../components/module/pagesHero/PagesHero";
 
 const API_URL = import.meta.env.VITE_API_URL;     // For API calls
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;  // For images
@@ -31,10 +32,13 @@ const BlogDetail = () => {
 
   return (
     <div>
-      <div className="relative px-[150px] bg-primary w-full h-[392px] pt-[119px]">
+      <PagesHero
+        title={title}
+        imageBack={blogHero} />     
+        {/* <div className="relative px-[150px] bg-primary w-full h-[392px] pt-[119px]">
         <h1 className="text-6xl text-white font-bold leading-[77px] text-left">{title}</h1> 
         <img className='w-[150px] h-[209px] z-1 absolute top-10 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
-      </div>
+      </div> */}
     <div className=" relative px-[150px] pt-16 bg-white">
       <img className='w-[150px] h-[209px] z-1 absolute top-70 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
       <img className='w-[150px] h-[209px] z-1 absolute top-5 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
