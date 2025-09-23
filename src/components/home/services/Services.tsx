@@ -64,17 +64,17 @@ const servicesData = [
 
 const Services: React.FC = () => {
   return (
-    <div className=" relative w-full xl:py-31 md:py-13 bg-servicesB xl:px-[150px] md:px-13 px-6 xl:mt-23 md:mt-31">
+    <div className=" relative w-full xl:py-31 md:py-13 py-16 bg-servicesB xl:px-[150px] md:px-13 px-6 xl:mt-23 md:mt-31 mt-16">
       <img className='w-[150px] h-[209px] xl:block hidden z-1 absolute top-30 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
       <img className='w-[150px] h-[209px] xl:block hidden z-1 absolute bottom-5 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
-      <h2 className="text-Black xl:text-5xl md:text-4xl font-semibold text-center w-1/2 mx-auto">
+      <h2 className="text-Black xl:text-5xl md:text-4xl text-2xl font-semibold md:text-center text-left md:w-1/2 w-full mx-auto">
         Our Services
       </h2>
 
-      <div className="bg-Orange mt-1 w-1/6 mx-auto h-0.5"></div>
+      <div className="bg-Orange mt-1 md:w-1/6 w-1/3 md:mx-auto h-0.5"></div>
 
       {/* Cards Grid */}
-      <div className="xl:mt-12 md:mt-8 flex flex-wrap justify-center gap-6">
+      <div className="xl:mt-12 mt-8  flex flex-wrap justify-center gap-6">
         {servicesData.map((service, idx) => (
           <ServiceCard
             key={idx}

@@ -106,10 +106,20 @@ body {
   width: 12px;
 }
 
+
+
+.gradient-hero{
+  background: #00402e3f;
+}
+
+
 .gradient{
   background: linear-gradient(90deg, #00402E 40%, #f2f2f20f 113.44%);
 }
 
-.gradient-hero{
-  background: #00402e3f;
+/* Mobile */
+@media (max-width: 767px) {
+  .gradient-mob{
+  background: linear-gradient(180deg, #00402E 40%, #f2f2f20f 113.44%);
+}
 }

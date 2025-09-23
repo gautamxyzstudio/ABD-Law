@@ -34,10 +34,10 @@ const testimonials = [
 
 const Testimonials : React.FC = () => {
   return (
-    <div className="relative xl:mt-38 md:mt-31 w-full flex flex-col align-middle xl:px-38 md:px-13 px-6">
-      <img className='w-[150px] h-[209px] xl:block md:hidden z-1 absolute top-0 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-      <img className='w-[150px] h-[209px] xl:block md:hidden z-1 absolute bottom-[-93px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
-      <h2 className="text-Black xl:text-5xl md:text-4xl font-semibold text-center mx-auto">
+    <div className="relative xl:mt-38 md:mt-31 mt-16 w-full flex flex-col align-middle xl:px-38 md:px-13 px-6">
+      <img className='w-[150px] h-[209px] xl:block hidden z-1 absolute top-0 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+      <img className='w-[150px] h-[209px] xl:block hidden z-1 absolute bottom-[-93px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+      <h2 className="text-Black xl:text-5xl md:text-4xl text-2xl font-semibold text-center mx-auto">
         Our customers are saying
       </h2>
 

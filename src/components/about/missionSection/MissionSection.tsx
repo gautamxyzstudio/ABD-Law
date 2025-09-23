@@ -14,9 +14,9 @@ const MissionSection: React.FC<MissionSectionProps> = ({ title, description, ima
       <div className="flex md:flex-row flex-col justify-between xl:mb-14 mb-8">
         <div>
             <h2 className="text-3xl font-bold text-Black">{title}</h2>
-            <div className="bg-Orange mt-0.5 w-4/5 h-0.5"></div>
+            <div className="bg-Orange mt-0.5 md:w-4/5 w-2/5 h-0.5"></div>
         </div>
-        <p className="text-base text-Black80 w-3/5 ">{description}</p>
+        <p className="text-base text-Black80 md:w-3/5 w-full md:mt-0 mt-4 ">{description}</p>
       </div>
 
       {/* Image */}

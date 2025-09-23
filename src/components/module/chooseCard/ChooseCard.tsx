@@ -9,7 +9,7 @@ import React from "react";
 
 const ChooseCard: React.FC<CardProps> = ({ icon, alt, title, description }) => {
   return (
-    <div className="border-GrayL border rounded-2xl flex flex-col items-center p-6 w-full w-[48%] lg:w-[31.5%] shadow-sm hover:shadow-md transition">
+    <div className="border-GrayL border rounded-2xl flex flex-col items-center p-6 w-full md:w-[48%] lg:w-[31.5%] shadow-sm hover:shadow-md transition">
       {/* Icon */}
       <img className="w-[64px] h-[64px]" src={icon} alt={alt} />
 
