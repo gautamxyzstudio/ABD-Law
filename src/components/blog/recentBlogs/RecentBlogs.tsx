@@ -50,7 +50,7 @@ const RecentBlogs: React.FC<RecentBlogsProps> = ({ excludeId }) => {
   if (blogs.length === 0) return null;
 
   return (
-    <div className="px-[150px] py-20 bg-servicesB mt-20">
+    <div className="xl:px-[150px] md:px-13 px-6 xl:py-20 md:py-13 py-16 bg-servicesB xl:mt-38 md:mt-31 mt-16">
       {/* Header */}
       <div className="flex justify-between items-center mb-10">
         <h2 className="text-4xl font-bold">Recent Blogs</h2>
@@ -63,7 +63,7 @@ const RecentBlogs: React.FC<RecentBlogsProps> = ({ excludeId }) => {
       </div>
 
       {/* Blog Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         {blogs.map((blog) => (
           <BlogCard key={blog.id} {...blog} />
         ))}

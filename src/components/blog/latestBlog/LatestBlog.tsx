@@ -52,23 +52,23 @@ const LatestBlog: React.FC = () => {
   : "https://via.placeholder.com/400x300";
 
   return (
-    <div className="relative mx-auto px-[150px] mt-38">
-      <img className='w-[150px] h-[209px] z-1 absolute bottom-[-56px] left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-      <img className='w-[150px] h-[209px] z-1 absolute top-[-82px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
-      <div className="grid md:grid-cols-2 gap-9 w-full items-center bg-white overflow-hidden">
+    <div className="relative mx-auto xl:px-[150px] md:px-13 px-6 xl:mt-38 md:mt-31 mt-16 ">
+      <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute bottom-[-56px] left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+      <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute top-[-82px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+      <div className="flex xl:flex-row flex-col xl:gap-9 w-full items-center bg-white overflow-hidden">
         {/* Image */}
         <div className="h-full">
           <img
             src={imgUrl}
             alt={title}
-            className="w-full object-cover h-[370px] rounded-2xl"
+            className="w-full object-cover md:h-[370px] h-54 rounded-2xl"
           />
         </div>
 
         {/* Content */}
         <div className="flex flex-col justify-between">
           {/* Category + Date */}
-          <div className="flex justify-between items-center mb-3">
+          <div className="flex justify-between items-center mt-3">
             <span className="bg-Yellow/12 text-Yellow text-sm px-4 py-1 rounded-md">
               {category}
             </span>
@@ -82,10 +82,10 @@ const LatestBlog: React.FC = () => {
           </div>
 
           {/* Title */}
-          <h2 className="text-2xl font-bold mb-3">{title}</h2>
+          <h2 className="text-2xl font-bold md:my-4 my-3">{title}</h2>
 
           {/* Short Description */}
-          <p className="text-gray-600 mb-10">{shortDesc}</p>
+          <p className="text-gray-600 md:mb-10 mb-6">{shortDesc}</p>
 
           {/* Button */}
           <a

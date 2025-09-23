@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 src={linkedin}
                 alt="linkedin"
               />
-              <img className="w-[24px] h-[24px]" src={twitter} alt="twitter" />
+              <img className="w-[24px] h-[24px]" src={twitter} alt="twitter"/>
             </div>
           </div>
 

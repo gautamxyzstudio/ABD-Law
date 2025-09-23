@@ -14,12 +14,12 @@ const categories = [
 
 const BlogHero: React.FC = () => {
   return (
-    <section className="relative bg-primary text-white pt-[124px] px-[150px] text-center h-[392px]">
+    <section className="relative bg-primary text-white xl:pt-41 md:pt-33 pt-47 xl:px-[150px] md:px-13 px-6 text-center xl:h-118 md:h-93 h-113 -mt-20">
 
       <img className='w-[150px] h-[209px] z-1 absolute bottom-[157px] right-0 rounded-2xl object-cover opacity-40' src={image1} alt='ellipse'/>
       <img src={blogHero} alt="background" className="absolute inset-0 w-full h-full object-cover opacity-50"/>
       {/* Heading */}
-      <h1 className="text-[80px] leading-[96px] font-bold mb-6 z-10 relative">
+      <h1 className="xl:text-[80px] md:text-[52px] text-4xl xl:leading-[96px] md:leading-16 leading:11 font-bold mb-6 z-10 relative">
         Our Latest Blog
       </h1>
 

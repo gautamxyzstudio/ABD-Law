@@ -36,12 +36,12 @@ const BlogList: React.FC = () => {
 }, [API_URL, BASE_URL]);
   console.log()
   return (
-    <div className="px-[150px] py-20 bg-servicesB mt-38">
+    <div className="xl:px-[150px] md:px-13 px-6 xl:py-20 md:py-13 py-16 bg-servicesB xl:mt-38 md:mt-31 mt-16">
       <div className="flex justify-between items-center">
         <h2 className="text-5xl leading-[52px] font-bold">Recent Blogs</h2>
       </div>
 
-      <div className="grid mt-13 grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid md:mt-10 mt-8 grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-6">
         {blogs.map((blog) => (
           <BlogCard key={blog.id} {...blog} />
         ))}

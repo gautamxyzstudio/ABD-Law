@@ -32,16 +32,12 @@ const BlogDetail = () => {
 
   return (
     <div>
-      <PagesHero
-        title={title}
-        imageBack={blogHero} />     
-        {/* <div className="relative px-[150px] bg-primary w-full h-[392px] pt-[119px]">
-        <h1 className="text-6xl text-white font-bold leading-[77px] text-left">{title}</h1> 
-        <img className='w-[150px] h-[209px] z-1 absolute top-10 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
-      </div> */}
-    <div className=" relative px-[150px] pt-16 bg-white">
-      <img className='w-[150px] h-[209px] z-1 absolute top-70 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-      <img className='w-[150px] h-[209px] z-1 absolute top-5 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+      <PagesHero title={title} imageBack={blogHero}/>     
+        
+    <div className=" relative xl:px-[150px] md:px-13 px-6 pt-16 bg-white">
+
+      <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute top-70 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
+      <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute top-5 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
        
       <div className="flex text-Black gap-3 text-sm">
           
@@ -55,20 +51,18 @@ const BlogDetail = () => {
           <p className="text-Yellow">|</p>
           <span>{category}</span>
 
-          
-          
-        </div> 
+      </div> 
       {/* Banner */}
       <img
         src={imgUrl}
         alt={title}
-        className="w-full h-124 object-cover rounded-2xl mt-5"
+        className="w-full md:h-124 h-54 object-cover md:rounded-2xl rounded-lg md:mt-5 mt-4"
       />
 
       {/* Title + Meta */}
       <div className="mt-6">
-        <h1 className="text-4xl font-bold mb-2">{title}</h1>
-        
+        <h1 className="xl:text-4xl md:text-3xl text-2xl font-bold">{title}</h1>
+      
       </div>
 
       {/* Content */}
