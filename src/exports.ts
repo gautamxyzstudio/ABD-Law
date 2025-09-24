@@ -55,6 +55,8 @@ import homeHeroBack from '../public/homeHeroBack.webp'
 import aboutHero from '../public/aboutHero.webp'
 import ourMission from '../public/ourMission.webp'
 import ourApproach from '../public/ourApproach.webp'
+import hamburger from '../public/hamburger.webp'
+import menuClose from '../public/menuClose.webp'
 
 export{
     facebook, instagram, linkedin, twitter,
@@ -73,4 +75,5 @@ export{
     contactCall, contactMail, contactLocation,  
     contactHero,  pttHero, blogHero, homeHeroBack, aboutHero,
     ourApproach, ourMission,
+    hamburger, menuClose
 }
