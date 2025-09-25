@@ -1,7 +1,9 @@
 import { consult } from "../../../exports"
 import Button from "../../module/button/Button"
+import { useNavigate } from "react-router-dom"; 
 
 const PromoSection = () => {
+  const navigate = useNavigate();
   return (
     <div className=" xl:mt-38 md:mt-31 mt-16 relative w-full xl:h-[524px] md:h-[324px] h-131 flex md:flex-row flex-col items-center justify-between">
       <div className="md:w-8/20 md:h-full w-full h-50 "></div>
@@ -21,7 +23,7 @@ const PromoSection = () => {
         <Button
             text="Book a Consultation"
             className="bg-white !text-primary mt-6 border-white md:w-auto w-full"
-            onClick={() => alert("Consultation booked!")}
+            onClick={() => {navigate("/contact"); window.scrollTo(0, 0)}} 
           />
       </div>
 

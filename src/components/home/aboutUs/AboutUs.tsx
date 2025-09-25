@@ -1,7 +1,10 @@
 import {about1, about2, about3, about4, image1, image2} from '../../../exports'
 import Button from '../../module/button/Button'
+import { useNavigate } from "react-router-dom"; 
+
 const AboutUs = () => {
-  return (
+  const navigate = useNavigate();
+  return (   
     <div className=' relative w-full xl:pt-[314px] md:pt-64 pt-26 xl:px-[150px] md:px-13 px-6  flex md:flex-row flex-col-reverse xl:gap-13 md:gap-10 gap-8 justify-between'>
         <img className='w-[150px] xl:block hidden h-[209px] z-1 absolute top-10 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
         <img className='w-[150px] xl:block hidden h-[209px] z-1 absolute bottom-5 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
@@ -29,7 +32,7 @@ const AboutUs = () => {
 
       <Button 
         text="Read More" 
-        onClick={() => alert("Navigating to services...")} 
+        onClick={() => {navigate("/about"); window.scrollTo(0, 0) }} 
         className="mt-8 w-fit"
       />
       </div>

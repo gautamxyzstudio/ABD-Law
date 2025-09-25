@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { image1, image2 } from "../../../exports";
 
 interface Blog {
@@ -9,65 +10,71 @@ interface Blog {
     shortDesc: string;
     blogDate: string;
     category: string;
+    createdAt: string; // added createdAt
     banner: {
       data: {
         attributes: {
           url: string;
         };
-      };
-    };
+      } | null;
+    } | null;
   };
 }
 
-const API_URL = "https://adbbackend.xyzdemowebsites.com/api/add-blogs?populate=*"; 
-
 const LatestBlog: React.FC = () => {
   const [blog, setBlog] = useState<Blog | null>(null);
-  
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchLatestBlog = async () => {
       try {
-        const res = await axios.get(API_URL);
-        const blogs: Blog[] = res.data.data;
-        // sort by blogDate descending to get latest
-        const sorted = blogs.sort(
-          (a, b) =>
-            new Date(b.attributes.blogDate).getTime() -
-            new Date(a.attributes.blogDate).getTime()
+        const res = await axios.get(
+          `${import.meta.env.VITE_API_URL}/add-blogs?populate=*&sort[0]=createdAt:desc&pagination[limit]=1`
         );
-        setBlog(sorted[0]); // pick latest
+
+        const latestBlog: Blog = res.data.data[0]; // latest added blog
+        setBlog(latestBlog);
       } catch (err) {
-        console.error("Error fetching blog:", err);
+        console.error("Error fetching latest blog:", err);
       }
     };
 
     fetchLatestBlog();
   }, []);
 
-  if (!blog) return null;
+  if (!blog) return <p>Loading latest blog...</p>; // show loader or placeholder
 
   const { title, shortDesc, blogDate, category, banner } = blog.attributes;
   const imgUrl = banner?.data?.attributes?.url
-  ? `https://adbbackend.xyzdemowebsites.com${banner.data.attributes.url}`
-  : "https://via.placeholder.com/400x300";
+    ? `${import.meta.env.VITE_API_BASE_URL}${banner.data.attributes.url}`
+    : "https://via.placeholder.com/400x300";
 
   return (
-    <div className="relative mx-auto xl:px-[150px] md:px-13 px-6 xl:mt-38 md:mt-31 mt-16 ">
-      <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute bottom-[-56px] left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-      <img className='w-[150px] h-[209px] z-1 xl:block hidden absolute top-[-82px] right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+    <div className="relative mx-auto xl:px-[150px] md:px-13 px-6 xl:mt-38 md:mt-31 mt-16">
+      {/* Decorative Images */}
+      <img
+        className="w-[150px] h-[209px] z-1 xl:block hidden absolute bottom-[-56px] left-0 rounded-2xl object-cover"
+        src={image2}
+        alt="ellipse"
+      />
+      <img
+        className="w-[150px] h-[209px] z-1 xl:block hidden absolute top-[-82px] right-0 rounded-2xl object-cover"
+        src={image1}
+        alt="ellipse"
+      />
+
       <div className="flex xl:flex-row flex-col xl:gap-9 w-full items-center bg-white overflow-hidden">
-        {/* Image */}
-        <div className="h-full">
+        {/* Blog Image */}
+        <div className="w-11/20 h-full">
           <img
             src={imgUrl}
             alt={title}
-            className="w-full object-cover md:h-[370px] h-54 rounded-2xl"
+            className="w-full md:h-[322px] h-54 rounded-2xl object-cover"
           />
         </div>
 
         {/* Content */}
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between w-9/20 xl:py-6 py-4 px-4">
           {/* Category + Date */}
           <div className="flex justify-between items-center mt-3">
             <span className="bg-Yellow/12 text-Yellow text-sm px-4 py-1 rounded-md">
@@ -88,13 +95,16 @@ const LatestBlog: React.FC = () => {
           {/* Short Description */}
           <p className="text-gray-600 md:mb-10 mb-6">{shortDesc}</p>
 
-          {/* Button */}
-          <a
-            href={`/blog/${blog.id}`}
-            className="inline-block bg-primary text-white px-5 py-2 mr-auto  rounded-md"
+          {/* Read More Button */}
+          <button
+            onClick={() => {
+              navigate(`/blogs/${blog.id}`);
+              window.scrollTo(0, 0);
+            }}
+            className="inline-block bg-primary text-white px-5 py-2 mr-auto rounded-md"
           >
             Read Article
-          </a>
+          </button>
         </div>
       </div>
     </div>

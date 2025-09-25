@@ -1,7 +1,9 @@
 import { homeHero, homeHeroBack } from '../../../exports'
 import Button from '../../module/button/Button'
+import { useNavigate } from "react-router-dom"; 
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <div className='relative bg-primary md:h-[758px] h-188 xl:px-[150px] md:pt-33 pt-32 -mt-20 md:px-13 px-6'>
         <img className='xl:w-3/5 w-[95%] xl:h-[456px] md:h-100 h-61 z-1 transform scale-x-[-1] absolute xl:bottom-[-160px] md:-bottom-33 -bottom-13 md:w-94/100 right-0 xl:rounded-tr-[80px] md:rounded-tr-[70px] rounded-tr-[52px] object-cover' src={homeHero} alt='hero-section'/>
@@ -15,7 +17,7 @@ const HeroSection = () => {
                 </div>
                 <Button 
                    text="Book a Consultation" 
-                   onClick={() => alert("Navigating to form...")} 
+                   onClick={() => {navigate("/contact");window.scrollTo(0, 0)} } 
                    className="md:mt-10 md:w-fit w-full !text-primary !bg-Yellow"
                  />
             </div>
