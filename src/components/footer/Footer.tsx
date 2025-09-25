@@ -63,11 +63,11 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-[20px] xl:w-1/5 md:w-2/10">
             <h3 className="text-white text-xl font-semibold">Services</h3>
             <ul className="text-white xl:text-base text-sm flex flex-col gap-[15px] opacity-80">
-              <li><Link to="/family-law" onClick={() => window.scrollTo(0, 0)} className="hover:text-Yellow transition-colors duration-300">Family Law</Link></li>
-              <li><Link to="/real-estate" onClick={() => window.scrollTo(0, 0)} className="hover:text-Yellow transition-colors duration-300">Real Estate Law</Link></li>
-              <li><Link to="/corporate" onClick={() => window.scrollTo(0, 0)} className="hover:text-Yellow transition-colors duration-300">Corporate & Commercial Law</Link></li>
-              <li><Link to="/wills" onClick={() => window.scrollTo(0, 0)} className="hover:text-Yellow transition-colors duration-300">Wills & Estate Planning</Link></li>
-              <li><Link to="/notary" onClick={() => window.scrollTo(0, 0)} className="hover:text-Yellow transition-colors duration-300">Notary & Immigration Services</Link></li>
+              <li><Link to="/family-law" className="hover:text-Yellow transition-colors duration-300">Family Law</Link></li>
+              <li><Link to="/real-estate" className="hover:text-Yellow transition-colors duration-300">Real Estate Law</Link></li>
+              <li><Link to="/corporate" className="hover:text-Yellow transition-colors duration-300">Corporate & Commercial Law</Link></li>
+              <li><Link to="/wills" className="hover:text-Yellow transition-colors duration-300">Wills & Estate Planning</Link></li>
+              <li><Link to="/notary" className="hover:text-Yellow transition-colors duration-300">Notary & Immigration Services</Link></li>
             </ul>
           </div>
 
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-[20px] xl:w-1/7 md:w-3/20">
             <h3 className="text-white text-xl font-semibold">Links</h3>
             <ul className="text-white xl:text-base text-sm flex flex-col gap-[15px] opacity-80">
-              <li><Link to="/blogs" onClick={() => window.scrollTo(0, 0)} className="hover:text-Yellow transition-colors duration-300">Blogs</Link></li>
+              <li><Link to="/blogs" className="hover:text-Yellow transition-colors duration-300">Blogs</Link></li>
               <li>Term of Service</li>
               <li>Privacy Policy</li>
             </ul>

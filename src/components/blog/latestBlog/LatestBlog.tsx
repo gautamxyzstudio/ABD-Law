@@ -49,7 +49,7 @@ const LatestBlog: React.FC = () => {
     fetchLatestBlog();
   }, []);
 
-  if (!blog) return <p>Loading latest blog...</p>; // show loader or placeholder
+  if (!blog) return; // show loader or placeholder
 
   const { title, shortDesc, blogDate, category, banner } = blog.attributes;
   const imgUrl = banner?.data?.attributes?.url
