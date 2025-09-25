@@ -23,6 +23,7 @@ const API_URL = "https://adbbackend.xyzdemowebsites.com/api/add-blogs?populate=*
 
 const LatestBlog: React.FC = () => {
   const [blog, setBlog] = useState<Blog | null>(null);
+  
 
   useEffect(() => {
     const fetchLatestBlog = async () => {

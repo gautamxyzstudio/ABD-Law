@@ -1,11 +1,11 @@
-import React from "react";
-import { logoY, callH, mailH, hamburger, menuClose } from "../../exports";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { logoY, callH, mailH, hamburger, menuClose } from "../../exports";
 import { routes } from "../../routes";
-import { useState } from "react";
 
 const Header: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="w-full sticky top-0 z-20">
       {/* Top Bar */}
@@ -33,15 +33,10 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Navigation - Desktop */}
-      
       <nav className="bg-transparent text-white xl:flex hidden justify-between items-center px-[150px] py-3">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img
-            src={logoY} // replace with your logo path
-            alt="ABD Law Corporation"
-            className="h-10"
-          />
+          <img src={logoY} alt="ABD Law Corporation" className="h-10" />
         </div>
 
         {/* Menu from routes array */}
@@ -66,87 +61,86 @@ const Header: React.FC = () => {
         </Link>
       </nav>
 
-      {/* Main Navigation - Tab/Mob */}
-      
+      {/* Main Navigation - Tab/Mobile */}
       <div className="bg-transparent xl:hidden text-Yellow md:px-13 px-6 py-3 flex justify-between items-center">
-        
-      {/* Logo */}
-      <div className="flex items-center space-x-2">
-        <img
-          src={logoY}
-          alt="Law Logo"
-          className="h-9 w-30"
-        />
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <img src={logoY} alt="Law Logo" className="h-9 w-30" />
+        </div>
+
+        {/* Right Side */}
+        <div className="flex flex-row gap-3">
+          <Link
+            to="/contact"
+            className="bg-Yellow md:block hidden text-white px-12 py-4 rounded-md font-medium hover:bg-yellow-700"
+          >
+            Contact Us
+          </Link>
+          {/* Hamburger */}
+          <button onClick={() => setIsOpen(true)} className="xl:hidden block">
+            <img
+              src={hamburger}
+              alt="Menu"
+              className="md:h-13 md:w-13 h-6 w-6"
+            />
+          </button>
+        </div>
       </div>
 
-      {/* Hamburger Button (Tablet + Mobile only) */}
-      <div className="flex flex-row gap-3">
-        <Link
-          to="/contact"
-          className="bg-Yellow md:block hidden text-white px-12 py-4 rounded-md font-medium hover:bg-yellow-700"
-        >
-          Contact Us
-        </Link>  
-      <button
-        onClick={() => setIsOpen(true)}
-        className="lg:hidden"
+      {/* Overlay */}
+      <div
+        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-500 
+        ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        onClick={() => setIsOpen(false)}
+      ></div>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full md:w-2/3 w-full bg-primary z-50 flex flex-col transform transition-transform duration-500 ease-in-out
+        ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <img
-         src= {hamburger}
-         alt="Menu"
-         className="md:h-13 md:w-13 h-6 w-6"
-  />
-      </button>
-      </div>
-      {/* Mobile / Tablet Sidebar */}
-      
-      {isOpen && (
-        <div className="fixed inset-0 bg-primary z-50  flex flex-col">
-          
-          <div className="flex flex-row justify-between md:px-13 px-6 py-3 mb-16">
+        {/* Header inside sidebar */}
+        <div className="flex flex-row justify-between md:px-13 px-6 py-3 mb-10">
           {/* Logo */}
-          <div className="flex items-center space-x-2 ">
+          <div className="flex items-center space-x-2">
             <img src={logoY} alt="Law Logo" className="h-9 w-30" />
           </div>
 
           {/* Close Button */}
-          <button
-            className="ml-auto text-Yellow"
-            onClick={() => setIsOpen(false)}
-          >
+          <button className="ml-auto text-Yellow" onClick={() => setIsOpen(false)}>
             <img
-             src= {menuClose}
-             alt="Menu"
-             className="md:h-13 md:w-13 h-6 w-6"
+              src={menuClose}
+              alt="Close Menu"
+              className="md:h-13 md:w-13 h-6 w-6"
             />
           </button>
-          </div>
-          {/* Links */}
-          <nav className="flex flex-col space-y-6 text-white/80 md:px-13 px-6 hover:text-white">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Family Law</a>
-            <a href="#">Real Estate</a>
-            <a href="#">Corporate</a>
-            <a href="#">Wills</a>
-            <a href="#">Notary</a>
-            <a href="#">Tax Calculator</a>
-          </nav>
+        </div>
 
-          {/* Contact Button */}
-          <div className="px-6">
-          <a
-            href="#"
-            className="md:hidden block w-full mt-6 bg-Yellow text-white text-center py-3 px-auto rounded-md"
+        {/* Links */}
+        <nav className="flex flex-col space-y-6 text-white/80 md:px-13 px-6 hover:text-white">
+          {routes.map((route) => (
+            <Link
+              key={route.path}
+              to={route.path}
+              onClick={() => setIsOpen(false)} // close after clicking
+              className="hover:text-Yellow transition-colors"
+            >
+              {route.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Contact Button */}
+        <div className="px-6 mt-8">
+          <Link
+            to="/contact"
+            className="md:hidden block w-full bg-Yellow text-white text-center py-3 px-auto rounded-md"
+            onClick={() => setIsOpen(false)}
           >
             Contact Us
-          </a>
-          </div>
+          </Link>
         </div>
-      )}
-    </div>
-   
-
+      </div>
     </header>
   );
 };
