@@ -1,16 +1,16 @@
 import React from "react";
 import { blogHero, image1 } from "../../../exports";
 
-// const categories = [
-//   "Family Law",
-//   "Real Estate",
-//   "Corporate",
-//   "Wills",
-//   "Notary",
-//   "AI Barista",
-//   "AI Barista",
-//   "AI Barista",
-// ];
+const categories = [
+  "Family Law",
+  "Real Estate",
+  "Corporate",
+  "Wills",
+  "Notary",
+  "AI Barista",
+  "AI Barista",
+  "AI Barista",
+];
 
 const BlogHero: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const BlogHero: React.FC = () => {
       </h1>
 
       {/* Categories */}
-      {/* <div className="flex flex-wrap justify-center gap-4 z-10 relative">
+      <div className="flex flex-wrap justify-center gap-4 z-10 relative">
         {categories.map((cat, index) => (
           <button
             key={index}
@@ -33,7 +33,7 @@ const BlogHero: React.FC = () => {
             {cat}
           </button>
         ))}
-      </div> */}
+      </div>
     </section>
   );
 };

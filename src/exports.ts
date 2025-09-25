@@ -57,11 +57,10 @@ import ourMission from '../public/ourMission.webp'
 import ourApproach from '../public/ourApproach.webp'
 import hamburger from '../public/hamburger.webp'
 import menuClose from '../public/menuClose.webp'
-import Logo from '../public/logo_admin.png';
 
 export{
     facebook, instagram, linkedin, twitter,
-    logo, Logo,
+    logo,
     location, call, message,
     experienced, legalSupport, clientFocused, guidance, support,
     family, realEstate, tick, corporate, notary, willEstate,

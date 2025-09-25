@@ -1,9 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { image1, image2 } from "../../../exports";
-import { useLoadingStore } from "../../../store/loadingStore";
 
 interface Blog {
   id: number;
@@ -26,11 +24,9 @@ interface Blog {
 const LatestBlog: React.FC = () => {
   const [blog, setBlog] = useState<Blog | null>(null);
   const navigate = useNavigate();
-  const {setLoading} = useLoadingStore()
 
   useEffect(() => {
     const fetchLatestBlog = async () => {
-      setLoading(true)
       try {
         const res = await axios.get(
           `${import.meta.env.VITE_API_URL}/add-blogs?populate=*&sort[0]=createdAt:desc&pagination[limit]=1`
@@ -40,9 +36,6 @@ const LatestBlog: React.FC = () => {
         setBlog(latestBlog);
       } catch (err) {
         console.error("Error fetching latest blog:", err);
-         setLoading(false)
-      }finally{
-        setLoading(false)
       }
     };
 
@@ -70,7 +63,7 @@ const LatestBlog: React.FC = () => {
         alt="ellipse"
       />
 
-      <div className="flex xl:flex-row flex-col xl:gap-9 w-full items-center overflow-hidden">
+      <div className="flex xl:flex-row flex-col xl:gap-9 w-full items-center bg-white overflow-hidden">
         {/* Blog Image */}
         <div className="w-11/20 h-full">
           <img
