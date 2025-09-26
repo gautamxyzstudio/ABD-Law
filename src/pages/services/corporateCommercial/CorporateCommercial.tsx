@@ -35,7 +35,7 @@ export default function CorporateCommercial() {
            image={incorporation}
            title="Incorporation Services"
            description1="Incorporating your business is a key milestone. We guide you through decisions about share structure, director powers, and business planning—ensuring your incorporation supports your goals now and into the future."
-           className="flex-row-reverse"
+           className="!flex-row-reverse"
         />
       </div>
       <Testimonials/>
