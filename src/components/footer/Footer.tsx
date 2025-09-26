@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="xl:px-[150px] md:px-13 px-6 xl:mt-38 md:mt-8 mt-12 w-full bg-Black">
+    <footer className="xl:px-[150px] md:px-13 px-6 xl:mt-38 md:mt-31 mt-12 w-full bg-Black">
       <div className="container">
         {/* Logo-block */}
         <div className="pt-12 relative flex flex-col items-center">
