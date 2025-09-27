@@ -5,7 +5,7 @@ import {image1, image2, incorporation, serviceCommercial, startups} from "../../
 
 export default function CorporateCommercial() {
   return (
-    <div>
+    <>
       <ServiceHero
         title="Corporate & Commercial Law" 
         imageBack={serviceCommercial} 
@@ -40,6 +40,6 @@ export default function CorporateCommercial() {
       </div>
       <Testimonials/>
 
-    </div>
+    </>
   );
 }

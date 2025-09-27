@@ -6,7 +6,7 @@ import {futurePlan, image1, image2, serviceWills} from "../../../exports";
 
 export default function WillsEstate() {
   return (
-    <div>
+    <>
       <ServiceHero
         title="Wills & Estate Planning" 
         imageBack={serviceWills}
@@ -33,6 +33,6 @@ export default function WillsEstate() {
       
       <Testimonials/>
 
-    </div>
+    </>
   );
 }

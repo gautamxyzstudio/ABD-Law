@@ -123,3 +123,8 @@ body {
   background: linear-gradient(180deg, #00402E 40%, #f2f2f20f 113.44%);
 }
 }
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+}

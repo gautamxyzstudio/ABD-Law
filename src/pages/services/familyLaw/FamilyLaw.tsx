@@ -6,7 +6,7 @@ import { adoption, divorce, guardianship, image1, image2, property, serviceFamil
 
 export default function FamilyLaw() {
   return (
-    <div>
+    <>
       <ServiceHero
         title="Family Law Services" 
         imageBack={serviceFamily} 
@@ -63,6 +63,6 @@ export default function FamilyLaw() {
       </div>
       <Testimonials/>
 
-    </div>
+    </>
   );
 }

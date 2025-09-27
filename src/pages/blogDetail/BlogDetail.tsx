@@ -30,7 +30,7 @@ const BlogDetail = () => {
     : "https://via.placeholder.com/600x400";
 
   return (
-    <div>
+    <>
       <PagesHero title={title} imageBack={blogHero} />
 
       <div className=" relative xl:px-[150px] md:px-13 px-6 pt-16 bg-white">
@@ -81,7 +81,7 @@ const BlogDetail = () => {
 
       <RecentBlogs excludeId={id} />
       <Testimonials />
-    </div>
+    </>
   );
 };
 

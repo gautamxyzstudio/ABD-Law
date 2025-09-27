@@ -7,7 +7,7 @@ import { contactHero, image1, image2 } from '../../exports'
 const ContactUs = () => {
 
   return (
-    <div>
+    <>
       <PagesHero
         title="Contact Us" 
         imageBack={contactHero} 
@@ -19,7 +19,7 @@ const ContactUs = () => {
       </div>
       <ContactInfo/>
       <Testimonials/>
-    </div>
+    </>
   )
 }
 export default ContactUs

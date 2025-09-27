@@ -6,7 +6,7 @@ import {image1, image2, serviceNotary, wideRange} from "../../../exports";
 
 export default function NotaryImmigration() {
   return (
-    <div>
+    <>
       <ServiceHero
         title="Notary & Immigration Services" 
         imageBack={serviceNotary} 
@@ -35,6 +35,6 @@ export default function NotaryImmigration() {
       
       <Testimonials/>
 
-    </div>
+    </>
   );
 }

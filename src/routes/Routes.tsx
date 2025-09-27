@@ -33,11 +33,11 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
 // 🔹 Public layout (Header + Footer)
 const PublicLayout = ({ children }: { children: React.ReactNode }) => (
-  <>
+  <main>
     <Header />
-    <main>{children}</main>
+    {children}
     <Footer />
-  </>
+  </main>
 );
 
 const AppRoutes: React.FC = () => {

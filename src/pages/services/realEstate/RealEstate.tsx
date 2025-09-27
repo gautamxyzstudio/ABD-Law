@@ -5,7 +5,7 @@ import { image1, image2, legal, serviceEstate } from "../../../exports";
 
 export default function RealEstate() {
   return (
-    <div>
+    <>
       <ServiceHero
         title="Real Estate Law" 
         imageBack={serviceEstate}
@@ -25,6 +25,6 @@ export default function RealEstate() {
       
       <Testimonials/>
 
-    </div>
+    </>
   );
 }

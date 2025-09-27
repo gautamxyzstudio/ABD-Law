@@ -1,15 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { logoY, callH, mailH, hamburger, menuClose } from "../../exports";
 import { routes } from "../../routes";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    let scrollContainer: Window | HTMLElement = window;
+    const main = document.querySelector("main");
+    if (main) {
+      const style = window.getComputedStyle(main);
+      const isScrollable =
+        main.scrollHeight > main.clientHeight ||
+        style.overflowY === "auto" ||
+        style.overflowY === "scroll";
+      if (isScrollable) scrollContainer = main;
+    }
+
+    const getScrollTop = () =>
+      scrollContainer === window
+        ? window.pageYOffset || document.documentElement.scrollTop || 0
+        : (scrollContainer as HTMLElement).scrollTop;
+
+    const handleScroll = () => {
+      const top = getScrollTop();
+      setScrolled(top > 50);
+    };
+
+    // call once to set initial state (important for back/forward pages)
+    handleScroll();
+
+    const opts = { passive: true } as AddEventListenerOptions;
+
+    if (scrollContainer === window) {
+      window.addEventListener("scroll", handleScroll, opts);
+      return () => window.removeEventListener("scroll", handleScroll);
+    } else {
+      (scrollContainer as HTMLElement).addEventListener(
+        "scroll",
+        handleScroll,
+        opts
+      );
+      return () =>
+        (scrollContainer as HTMLElement).removeEventListener(
+          "scroll",
+          handleScroll
+        );
+    }
+  }, []);
 
   return (
-    <header className="w-full sticky top-0 z-20">
+    <header
+      className={`w-full sticky top-0 z-20 transition-colors duration-300 ${
+        scrolled ? "bg-primary shadow-md" : "bg-transparent"
+      }`}
+    >
       {/* Top Bar */}
-      <div className="bg-Yellow xl:flex hidden text-white xl:text-sm text-xs justify-between items-center xl:px-[150px] px-13 py-4">
+      <div
+        className={`bg-Yellow xl:flex hidden text-white xl:text-sm text-xs justify-between items-center xl:px-[150px] px-13 py-4 transition duration-300`}
+      >
         <p>
           Trusted legal guidance for families, businesses, and individuals
           across British Columbia
@@ -33,7 +84,9 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Navigation - Desktop */}
-      <nav className="bg-transparent text-white xl:flex hidden justify-between items-center px-[150px] py-3">
+      <nav
+        className={` text-white bg-transparent xl:flex hidden justify-between items-center px-[150px] py-3 transition-colors duration-300`}
+      >
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img src={logoY} alt="ABD Law Corporation" className="h-10" />
@@ -62,17 +115,21 @@ const Header: React.FC = () => {
       </nav>
 
       {/* Main Navigation - Tab/Mobile */}
-      <div className="bg-transparent xl:hidden text-Yellow md:px-13 px-6 py-3 flex justify-between items-center">
+      <div
+        className={`${
+          scrolled ? "text-black" : "text-Yellow"
+        } bg-transparent xl:hidden md:px-13 px-6 py-3 flex justify-between items-center transition-colors duration-300`}
+      >
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src={logoY} alt="Law Logo" className="h-9 w-30" />
         </div>
 
         {/* Right Side */}
-        <div className="flex flex-row gap-3">
+        <div className="flex flex-row gap-3 items-center-safe">
           <Link
             to="/contact"
-            className="bg-Yellow md:block hidden text-white px-12 py-4 rounded-md font-medium hover:bg-yellow-700"
+            className="bg-Yellow md:block hidden text-white px-6 py-2 rounded-md font-medium hover:bg-yellow-700"
           >
             Contact Us
           </Link>
@@ -107,7 +164,10 @@ const Header: React.FC = () => {
           </div>
 
           {/* Close Button */}
-          <button className="ml-auto text-Yellow" onClick={() => setIsOpen(false)}>
+          <button
+            className="ml-auto text-Yellow"
+            onClick={() => setIsOpen(false)}
+          >
             <img
               src={menuClose}
               alt="Close Menu"
