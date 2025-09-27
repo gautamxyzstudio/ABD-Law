@@ -33,7 +33,7 @@ const LatestBlog: React.FC = () => {
       setLoading(true)
       try {
         const res = await axios.get(
-          `${import.meta.env.VITE_API_URL}/add-blogs?populate=*&sort[0]=createdAt:desc&pagination[limit]=1`
+          `${import.meta.env.VITE_API_BASE_URL}/api/add-blogs?populate=*&sort[0]=createdAt:desc&pagination[limit]=1`
         );
 
         const latestBlog: Blog = res.data.data[0]; // latest added blog

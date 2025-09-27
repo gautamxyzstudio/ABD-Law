@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BlogCard from "../../module/blogCard/BlogCard";
@@ -11,7 +12,6 @@ type Blog = {
   banner: string;
 };
 
-const API_URL = import.meta.env.VITE_API_URL;
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 interface RecentBlogsProps {
@@ -22,7 +22,7 @@ const RecentBlogs: React.FC<RecentBlogsProps> = ({ excludeId }) => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
 
   useEffect(() => {
-    axios.get(`${API_URL}/add-blogs?populate=*`).then((res) => {
+    axios.get(`${BASE_URL}/api/add-blogs?populate=*`).then((res) => {
       const mappedBlogs: Blog[] = res.data.data.map((item: any) => ({
         id: item.id,
         title: item.attributes.title,
