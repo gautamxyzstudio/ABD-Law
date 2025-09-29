@@ -95,6 +95,9 @@ body {
 
 
 /* Swiper */
+.swiper-pagination{
+ bottom: -6px !important;
+}
 
 .swiper-pagination-bullet-active{
   background-color: var(--primary) !important;
@@ -127,4 +130,5 @@ body {
 main {
   height: 100vh;
   overflow-y: auto;
+  background-color: var(--background);
 }

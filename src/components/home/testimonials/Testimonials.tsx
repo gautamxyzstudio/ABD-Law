@@ -43,7 +43,7 @@ const Testimonials : React.FC = () => {
 
       <div className="bg-Orange mt-1 w-1/6 mx-auto h-0.5"></div>
 
-      <div className='w-full mx-auto xl:mt-13 md:mt-6 max-w-screen-2xl h-[400px] max-h-[420px] flex items-center'>
+      <div className='w-full mx-auto xl:mt-13 md:mt-6 max-w-screen-2xl h-[400px] flex items-center'>
 
         <Swiper
           modules={[Pagination, Autoplay]}

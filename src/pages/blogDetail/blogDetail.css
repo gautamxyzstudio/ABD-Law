@@ -1,0 +1,158 @@
+.__html {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+
+        color: var(--text-primary);
+        display: inline-block;
+    }
+
+    h2 {
+        margin-bottom: 18px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    h3 {
+        margin-bottom: 16px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    h4 {
+        margin-bottom: 14px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h5,
+    h6 {
+        margin-bottom: 12px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    p {
+        margin-bottom: 24px;
+        font-size: 20px;
+        line-height: 28px;
+
+    }
+
+    ol,
+    ul {
+        margin-bottom: 30px;
+        list-style-position: inside;
+
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol li,
+    ul li {
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    li {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: 744px) and (max-width: 1024px) {
+    .__html {
+
+        h1,
+        h2,
+        h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 24px;
+
+        }
+
+        ol li,
+        ul li {
+            margin-bottom: 8px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+    }
+}
+
+@media (min-width:300px) and (max-width:765px) {
+    .blog-title {
+        font-size: 20px !important;
+        line-height: 28px !important;
+    }
+
+    .__html {
+
+        h1,
+        h2,
+        h3 {
+            margin-bottom: 8px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+
+        p {
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        ol li,
+        ul li {
+            margin-bottom: 4px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+    }
+}

@@ -6,6 +6,7 @@ import Testimonials from "../../components/home/testimonials/Testimonials";
 import RecentBlogs from "../../components/blog/recentBlogs/RecentBlogs";
 import { blogHero, image1, image2 } from "../../exports";
 import PagesHero from "../../components/module/pagesHero/PagesHero";
+import './blogDetail.css';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL; // For images
 
@@ -20,9 +21,9 @@ const BlogDetail = () => {
       .catch((err) => console.error("Error fetching blog:", err));
   }, [id]);
 
-  if (!blog) return <p>Loading...</p>;
+  if (!blog) return <p>Loading...</p>; 
 
-  const { title, shortDesc, blogDate, category, banner } = blog.attributes;
+  const { title, blogDate, category, banner, blogData } = blog.attributes;
 
   // ✅ Correct image URL
   const imgUrl = banner?.data?.attributes?.url
@@ -74,8 +75,10 @@ const BlogDetail = () => {
 
         {/* Content */}
         <div className="mt-6 text-gray-700 leading-relaxed">
-          <p>{shortDesc}</p>
-          {/* If you have long content field (like blogData), render it with dangerouslySetInnerHTML */}
+          <div
+          dangerouslySetInnerHTML={{ __html: blogData || '' }}
+          className="__html"
+        />
         </div>
       </div>
 
