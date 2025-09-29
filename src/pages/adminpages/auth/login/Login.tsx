@@ -67,7 +67,7 @@ const Login = () => {
 
   return (
     <div className="flex w-screen h-screen justify-center items-center bg-gray-50">
-      <Container component="main" maxWidth="xs">
+      <Container component="div" maxWidth="xs">
         <Box
           sx={{
             display: "flex",
