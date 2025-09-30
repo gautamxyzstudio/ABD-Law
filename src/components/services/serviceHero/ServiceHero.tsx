@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface HeroSectionProps {
   title: string;
@@ -13,7 +14,7 @@ const ServiceHero: React.FC<HeroSectionProps> = ({ title, imageBack, image }) =>
         {/* Overlay */}
         <div className="absolute gradient-hero"></div>
         <h2 className="xl:w-2/5 w-full xl:text-6xl md:text-5xl text-4xl font-bold text-white xl:leading-19 md:leading-14 leading-11 z-10">{title}</h2>
-        <img
+        <LazyLoadImage
           src={image}
           alt={title}
           className="absolute xl:w-3/5 md:w-47/50 w-19/20 right-0 xl:bottom-[-204px] md:-bottom-73 -bottom-33 xl:h-114 md:h-100 h-57 object-cover xl:rounded-tl-[80px] md:rounded-tl-[70px] rounded-tl-[52px]"

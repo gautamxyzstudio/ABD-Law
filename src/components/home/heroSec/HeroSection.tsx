@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { homeHero, homeHeroBack } from '../../../exports'
 import Button from '../../module/button/Button'
 import { useNavigate } from "react-router-dom"; 
@@ -6,8 +7,8 @@ const HeroSection = () => {
   const navigate = useNavigate();
   return (
     <div className='relative bg-primary md:h-[758px] h-188 xl:px-[150px] md:pt-33 pt-32 -mt-20 md:px-13 px-6'>
-        <img className='xl:w-3/5 w-[95%] xl:h-[456px] md:h-100 h-61 z-1 transform scale-x-[-1] absolute xl:bottom-[-160px] md:-bottom-33 -bottom-13 md:w-94/100 right-0 xl:rounded-tr-[80px] md:rounded-tr-[70px] rounded-tr-[52px] object-cover' src={homeHero} alt='hero-section'/>
-        <img src={homeHeroBack} alt="background" className="absolute inset-0 w-full h-full object-cover opacity-50"/>
+        <LazyLoadImage className='xl:w-3/5 w-[95%] xl:h-[456px] md:h-100 h-61 z-1 transform scale-x-[-1] absolute xl:bottom-[-160px] md:-bottom-33 -bottom-13 md:w-94/100 right-0 xl:rounded-tr-[80px] md:rounded-tr-[70px] rounded-tr-[52px] object-cover' src={homeHero} alt='hero-section'/>
+        <LazyLoadImage src={homeHeroBack} alt="background" className="absolute inset-0 w-full h-full object-cover opacity-50"/>
          
         <div className=' w-full flex justify-between relative xl:items-start items-end'>
             <div className='xl:w-[66%] md:w-14/20 w-full'>

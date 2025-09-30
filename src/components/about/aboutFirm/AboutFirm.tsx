@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import {about1, about2, about3, about4, image1, image2} from '../../../exports'
 const AboutFirm = () => {
   return (
@@ -7,11 +8,11 @@ const AboutFirm = () => {
 
       {/* Left-side */}
       <div className='xl:w-1/2 md:w-11/20 w-full xl:h-[557px] h-83 md:h-104 relative xl:pt-[113px] md:pt-21 pt-16'>
-        <img className='w-[70.4%] xl:h-[270px] md:h-50 h-40 z-1 absolute top-0 left-0 rounded-2xl object-cover' src={about2} alt='books'/>
-        <img className='w-[70.4%] xl:h-[270px] md:h-50 h-40 z-1 absolute bottom-0 right-0 rounded-2xl object-cover' src={about1} alt='books'/>
+        <LazyLoadImage className='w-[70.4%] xl:h-[270px] md:h-50 h-40 z-1 absolute top-0 left-0 rounded-2xl object-cover' src={about2} alt='books'/>
+        <LazyLoadImage className='w-[70.4%] xl:h-[270px] md:h-50 h-40 z-1 absolute bottom-0 right-0 rounded-2xl object-cover' src={about1} alt='books'/>
         <div className='w-full z-0 relative xl:h-[314px] md:h-59 h-46 bg-Yellow rounded-2xl'>
-            <img className='w-[26%] xl:h-[158px] h-23 md:h-29 absolute top-0 right-0 rounded-2xl object-cover' src={about3} alt='books'/>
-            <img className='w-[26%] xl:h-[139px] h-20 md:h-26 absolute bottom-0 left-0 rounded-2xl object-cover' src={about4} alt='books'/>
+            <LazyLoadImage className='w-[26%] xl:h-[158px] h-23 md:h-29 absolute top-0 right-0 rounded-2xl object-cover' src={about3} alt='books'/>
+            <LazyLoadImage className='w-[26%] xl:h-[139px] h-20 md:h-26 absolute bottom-0 left-0 rounded-2xl object-cover' src={about4} alt='books'/>
         </div>
         
       </div>

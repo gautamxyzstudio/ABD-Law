@@ -1,5 +1,6 @@
 import React from "react";
 import { tick } from "../../../exports";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface ServiceSectionProps {
   image: string;
@@ -26,7 +27,7 @@ const ServiceCard: React.FC<ServiceSectionProps> = ({
         {/* Image */}
       <div className="relative  md:w-10/20 w-full">
         <div className=" z-10 relative">
-        <img
+        <LazyLoadImage
           src={image}
           alt={title}
           className="xl:rounded-xl rounded-lg xl:w-full w-[96%] xl:h-[511px] md:h-85 h-78 object-cover"

@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface MissionSectionProps {
   title: string;
@@ -21,7 +22,7 @@ const MissionSection: React.FC<MissionSectionProps> = ({ title, description, ima
 
       {/* Image */}
       <div className="rounded-2xl overflow-hidden xl:h-[511px] h-113">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+        <LazyLoadImage src={image} alt={title} className="w-full h-full object-cover" />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import {tick} from "../../../exports";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface ServiceCardProps {
   image: string;
@@ -19,7 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, alt, title, services }
       <div className="mt-4 w-full grid xl:grid-cols-2 md:grid-cols-1 xl:gap-4 gap-3 text-Black ">
         {services.map((service, idx) => (
           <div key={idx} className="flex items-center gap-1.5 xl:text-base text-sm">
-            <img className="xl:w-6 xl:h-6 w-5 h-5" src={tick} alt={alt} />{service}
+            <LazyLoadImage className="xl:w-6 xl:h-6 w-5 h-5" src={tick} alt={alt} />{service}
           </div>
         ))}
       </div>
