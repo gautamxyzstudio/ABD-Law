@@ -1,6 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { family, realEstate, willEstate, notary, corporate, image1, image2 } from "../../../exports";
 import ServiceCard from "../../module/serviceCard/ServiceCard";
+
+export const routes = [
+  { path: "/", name: "Home" },
+  { path: "/about", name: "About" },
+  { path: "/family-law", name: "Family Law" },
+  { path: "/real-estate", name: "Real Estate Law" },
+  { path: "/corporate", name: "Corporate & Commercial Law" },
+  { path: "/wills", name: "Wills & Estate Planning" },
+  { path: "/notary", name: "Notary & Immigration Services" },
+  { path: "/tax-calculator", name: "Tax Calculator" },
+];
 
 const servicesData = [
   {
@@ -30,7 +42,7 @@ const servicesData = [
   },
   {
     image: corporate,
-    alt: "corporate & Commercial Law",
+    alt: "Corporate & Commercial Law",
     title: "Corporate & Commercial Law",
     services: [
       "Business Formation",
@@ -63,10 +75,25 @@ const servicesData = [
 ];
 
 const Services: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (title: string) => {
+    const route = routes.find((r) => r.name === title);
+    if (route) navigate(route.path);
+  };
+
   return (
-    <div className=" relative w-full xl:py-31 md:py-13 py-16 bg-servicesB xl:px-[150px] md:px-13 px-6 xl:mt-23 md:mt-31 mt-16">
-      <img className='w-[150px] h-[209px] xl:block hidden z-1 absolute top-30 left-0 rounded-2xl object-cover' src={image2} alt='ellipse'/>
-      <img className='w-[150px] h-[209px] xl:block hidden z-1 absolute bottom-5 right-0 rounded-2xl object-cover' src={image1} alt='ellipse'/>
+    <div className="relative w-full xl:py-31 md:py-13 py-16 bg-servicesB xl:px-[150px] md:px-13 px-6 xl:mt-23 md:mt-31 mt-16">
+      <img
+        className="w-[150px] h-[209px] xl:block hidden z-1 absolute top-30 left-0 rounded-2xl object-cover"
+        src={image2}
+        alt="ellipse"
+      />
+      <img
+        className="w-[150px] h-[209px] xl:block hidden z-1 absolute bottom-5 right-0 rounded-2xl object-cover"
+        src={image1}
+        alt="ellipse"
+      />
       <h2 className="text-Black xl:text-5xl md:text-4xl text-2xl font-semibold md:text-center text-left md:w-1/2 w-full mx-auto">
         Our Services
       </h2>
@@ -74,7 +101,7 @@ const Services: React.FC = () => {
       <div className="bg-Orange mt-1 md:w-1/6 w-1/3 md:mx-auto h-0.5"></div>
 
       {/* Cards Grid */}
-      <div className="xl:mt-12 mt-8  flex flex-wrap justify-center gap-6">
+      <div className="xl:mt-12 mt-8 flex flex-wrap justify-center gap-6">
         {servicesData.map((service, idx) => (
           <ServiceCard
             key={idx}
@@ -82,6 +109,8 @@ const Services: React.FC = () => {
             alt={service.alt}
             title={service.title}
             services={service.services}
+            onClick={() => handleCardClick(service.title)} // <-- Pass click handler
+            className="cursor-pointer" // <-- Keep pointer cursor
           />
         ))}
       </div>
