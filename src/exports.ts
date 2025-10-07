@@ -58,6 +58,7 @@ import ourApproach from '../public/ourApproach.webp'
 import hamburger from '../public/hamburger.webp'
 import menuClose from '../public/menuClose.webp'
 import Logo from '../public/logo_admin.png';
+import notFound from '../public/notFound.webp'
 
 export{
     facebook, instagram, linkedin, twitter,
@@ -76,5 +77,6 @@ export{
     contactCall, contactMail, contactLocation,  
     contactHero,  pttHero, blogHero, homeHeroBack, aboutHero,
     ourApproach, ourMission,
-    hamburger, menuClose
+    hamburger, menuClose,
+    notFound
 }

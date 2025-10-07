@@ -18,6 +18,7 @@ import Login from "../pages/adminpages/auth/login/Login";
 import { useAuthStore } from "../store/authStore";
 import DashboardLayout from "../components/layout/DashboardLayout";
 import Blogs from "../pages/blogs/blogs";
+import NotFound from "../pages/notFound/NotFound";
 
 // 🔹 Protect admin routes
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -111,9 +112,7 @@ const AppRoutes: React.FC = () => {
         path="*"
         element={
           <PublicLayout>
-            <h1 style={{ textAlign: "center", padding: "2rem" }}>
-              404 - Page Not Found
-            </h1>
+            <NotFound/>
           </PublicLayout>
         }
       />
