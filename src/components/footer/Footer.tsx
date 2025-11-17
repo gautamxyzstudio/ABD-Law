@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 src={linkedin}
                 alt="linkedin"
               />
-              <img className="w-[24px] h-[24px]" src={twitter} alt="twitter"/>
+              <img className="w-[24px] h-[24px]" src={twitter} alt="twitter" />
             </div>
           </div>
 
@@ -63,11 +63,46 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-[20px] xl:w-1/5 md:w-2/10">
             <h3 className="text-white text-xl font-semibold">Services</h3>
             <ul className="text-white xl:text-base text-sm flex flex-col gap-[15px] opacity-80">
-              <li><Link to="/family-law" className="hover:text-Yellow transition-colors duration-300">Family Law</Link></li>
-              <li><Link to="/real-estate" className="hover:text-Yellow transition-colors duration-300">Real Estate Law</Link></li>
-              <li><Link to="/corporate" className="hover:text-Yellow transition-colors duration-300">Corporate & Commercial Law</Link></li>
-              <li><Link to="/wills" className="hover:text-Yellow transition-colors duration-300">Wills & Estate Planning</Link></li>
-              <li><Link to="/notary" className="hover:text-Yellow transition-colors duration-300">Notary & Immigration Services</Link></li>
+              <li>
+                <Link
+                  to="/family-law"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Family Law
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/real-estate"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Real Estate Law
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/corporate"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Corporate & Commercial Law
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/wills"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Wills & Estate Planning
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/notary"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Notary & Immigration Services
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -75,7 +110,14 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-[20px] xl:w-1/7 md:w-3/20">
             <h3 className="text-white text-xl font-semibold">Links</h3>
             <ul className="text-white xl:text-base text-sm flex flex-col gap-[15px] opacity-80">
-              <li><Link to="/blogs" className="hover:text-Yellow transition-colors duration-300">Blogs</Link></li>
+              <li>
+                <Link
+                  to="/blogs"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Blogs
+                </Link>
+              </li>
               <li>Term of Service</li>
               <li>Privacy Policy</li>
             </ul>
@@ -89,13 +131,16 @@ const Footer: React.FC = () => {
                 <img className="w-[24px] h-[24px]" src={call} alt="call" />
                 604 743 3110
               </Link>
-              <Link className="flex gap-4" to="https://maps.app.goo.gl/DVExFL5Lc9PZCVP88">
+              <Link
+                className="flex gap-4"
+                to="https://maps.app.goo.gl/DVExFL5Lc9PZCVP88"
+              >
                 <img
                   className="w-[24px] h-[24px]"
                   src={location}
                   alt="address"
                 />
-                +7889 Mechanic Rd.Miami, FL 33125
+                Unit 202, 2760 Trethewey St, Abbotsford BC V2T 3R3
               </Link>
               <Link className="flex gap-4" to="mailto:office@abdlaw.ca">
                 <img className="w-[24px] h-[24px]" src={message} alt="email" />
@@ -108,10 +153,12 @@ const Footer: React.FC = () => {
         {/* Bottom-bar */}
         <div className="flex justify-between xl:pt-6 xl:pb-7 md:pt-4 md:pb-8 pt-3 pb-5 border-t border-white opacity-80">
           <p className="mb-0 opacity-60 text-white xl:text-base text-sm">
-            ABD LAW CORPORATION © {new Date().getFullYear()} | All rights reserved.
+            ABD LAW CORPORATION © {new Date().getFullYear()} | All rights
+            reserved.
           </p>
           <p className="mb-0 opacity-60 text-white xl:text-base text-sm">
-            Designed & Developed by <a href="https://www.xyz.studio/">XYZ Studio</a>
+            Designed & Developed by{" "}
+            <a href="https://www.xyz.studio/">XYZ Studio</a>
           </p>
         </div>
       </div>

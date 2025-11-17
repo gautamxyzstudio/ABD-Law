@@ -59,6 +59,7 @@ import hamburger from '../public/hamburger.webp'
 import menuClose from '../public/menuClose.webp'
 import Logo from '../public/logo_admin.png';
 import notFound from '../public/notFound.webp'
+import linkImg from "../public/location.webp"
 
 export{
     facebook, instagram, linkedin, twitter,
@@ -78,5 +79,5 @@ export{
     contactHero,  pttHero, blogHero, homeHeroBack, aboutHero,
     ourApproach, ourMission,
     hamburger, menuClose,
-    notFound
+    notFound, linkImg
 }
