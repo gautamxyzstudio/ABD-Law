@@ -118,8 +118,30 @@ const Footer: React.FC = () => {
                   Blogs
                 </Link>
               </li>
-              <li>Term of Service</li>
-              <li>Privacy Policy</li>
+              <li>
+                <Link
+                  to="/term-of-service"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Term of Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/privacy-policy"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/disclaimer"
+                  className="hover:text-Yellow transition-colors duration-300"
+                >
+                  Disclaimer
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -1,9 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { family, realEstate, willEstate, notary, corporate, image1, image2 } from "../../../exports";
+import {
+  family,
+  realEstate,
+  willEstate,
+  notary,
+  corporate,
+  image1,
+  image2,
+} from "../../../exports";
 import ServiceCard from "../../module/serviceCard/ServiceCard";
 
-export const routes = [
+const routes = [
   { path: "/", name: "Home" },
   { path: "/about", name: "About" },
   { path: "/family-law", name: "Family Law" },
@@ -15,19 +23,6 @@ export const routes = [
 ];
 
 const servicesData = [
-  {
-    image: family,
-    alt: "Family Law",
-    title: "Family Law",
-    services: [
-      "Divorce & Separation",
-      "Guardianship & Access",
-      "Spousal & Child Support",
-      "Adoption Family Violence",
-      "Protection Orders",
-      "Separation agreements",
-    ],
-  },
   {
     image: realEstate,
     alt: "Real Estate Law",
@@ -60,6 +55,19 @@ const servicesData = [
       "Will Drafting & Updates",
       "Estate & Trust Planning",
       "Powers Of Attorney",
+    ],
+  },
+  {
+    image: family,
+    alt: "Family Law",
+    title: "Family Law",
+    services: [
+      "Divorce & Separation",
+      "Guardianship & Access",
+      "Spousal & Child Support",
+      "Family Violence & Protection Orders",
+      "Adoption",
+      "Separation agreements",
     ],
   },
   {

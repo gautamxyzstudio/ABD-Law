@@ -74,7 +74,7 @@ const Header: React.FC = () => {
             office@abdlaw.ca
           </a>
           <a
-            href="tel:+16047433110" 
+            href="tel:+16047433110"
             className="flex items-center text-xs gap-1 hover:opacity-80"
           >
             <img src={callH} alt="Phone" className="w-4 h-4" />
@@ -90,12 +90,13 @@ const Header: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Link to="/">
-          <img src={logoY} alt="ABD Law Corporation" className="h-10" /> </Link>
+            <img src={logoY} alt="ABD Law Corporation" className="h-10" />{" "}
+          </Link>
         </div>
 
         {/* Menu from routes array */}
         <div className="hidden md:flex items-center gap-6 text-sm">
-          {routes.map((route) => (
+          {routes.slice(1).map((route) => (
             <Link
               key={route.path}
               to={route.path}

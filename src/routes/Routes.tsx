@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
@@ -19,6 +15,9 @@ import { useAuthStore } from "../store/authStore";
 import DashboardLayout from "../components/layout/DashboardLayout";
 import Blogs from "../pages/blogs/blogs";
 import NotFound from "../pages/notFound/NotFound";
+import Disclaimer from "../pages/disclaimer/Disclaimer";
+import TermOfServices from "../pages/termOfServices/TermOfServices";
+import PrivacyPolicy from "../pages/privacyPolicy/PrivacyPolicy";
 
 // 🔹 Protect admin routes
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -106,13 +105,37 @@ const AppRoutes: React.FC = () => {
           </PublicLayout>
         }
       />
+      <Route
+        path="/disclaimer"
+        element={
+          <PublicLayout>
+            <Disclaimer />
+          </PublicLayout>
+        }
+      />
+      <Route
+        path="/term-of-service"
+        element={
+          <PublicLayout>
+            <TermOfServices />
+          </PublicLayout>
+        }
+      />
+      <Route
+        path="/privacy-policy"
+        element={
+          <PublicLayout>
+            <PrivacyPolicy />
+          </PublicLayout>
+        }
+      />
 
       {/* 🔹 404 Fallback */}
       <Route
         path="*"
         element={
           <PublicLayout>
-            <NotFound/>
+            <NotFound />
           </PublicLayout>
         }
       />
