@@ -10,7 +10,7 @@ interface TestimonialProps {
 
 const TestimonialCard: React.FC<TestimonialProps> = ({ text, name, rating }) => {
   return (
-    <div className="bg-white shadow-md rounded-xl p-6 flex flex-col h-[320px]">
+    <div className="bg-white shadow-md rounded-xl p-6 flex flex-col h-[350px]">
       
       <img className="w-12 h-12 mb-6" src={comma} alt="Quote Icon" />
 
